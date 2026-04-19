@@ -1,12 +1,21 @@
 import { Container } from "../components"
-import { projects } from "../constants/projects"
+import { phase_1_projects } from "../constants/projects"
 
 const Projects = () => {
     return (
         <Container>
-            <div className="min-h-screen flex items-center justify-center">
-                {projects.map((project) => (
-                    <a key={project.id} href={project.path} target="_blank" className="bg-lime-500 px-6 py-2 rounded-2xl shadow hover:bg-lime-600 transition-all">{project.name}</a>
+            <h2 className="text-2xl font-bold text-center p-5">Phase 1 Projects</h2>
+            <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {phase_1_projects.map((project) => (
+                    <div key={project.id} className="bg-card-bg p-4 rounded-2xl shadow hover:shadow-lg transition-all border border-card-border">
+                        <div className="overflow-hidden rounded-2xl">
+                            <img src={project.img} alt={project.name} />
+                        </div>
+                        <div className="flex items-center justify-between mt-4">
+                            <h2 className="text-xl font-semibold">{project.name}</h2>
+                            <a href={project.path} target="_blank" className="bg-btn-bg text-btn-text px-6 py-2 rounded-2xl shadow hover:bg-btn-hover transition-all">Open Live</a>
+                        </div>
+                    </div>
                 ))}
             </div>
         </Container>

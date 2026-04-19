@@ -1,6 +1,7 @@
 import { Container } from "../"
 import DesktopMenu from "./DesktopMenu"
 import HamburgerMenu from "./HamburgerMenu"
+import ThemeToggle from "./ThemeToggle"
 import "./header.css"
 
 const navItems = [
@@ -26,9 +27,11 @@ const Header = () => {
                     <div>
                         <img src="/logo.png" alt="" width={150} />
                     </div>
-                    <DesktopMenu navItems={navItems} />
-                    <HamburgerMenu navItems={navItems} />
-
+                    <div className="flex items-center gap-4">
+                        <DesktopMenu navItems={navItems} />
+                        <ThemeToggle />
+                        <HamburgerMenu navItems={navItems} />
+                    </div>
                 </nav>
             </header>
         </Container>

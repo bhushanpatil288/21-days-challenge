@@ -2,24 +2,52 @@
 
 body {
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme (default) */
+:root {
+    --bg-page: #f1f5f9;
+    --text-page: #0f172a;
+    --bg-card: #ffffff;
+    --border-card: #e2e8f0;
+    --bg-nav-hover: #e2e8f0;
+    --bg-nav-active: #059669;
+    --text-nav-active: #ffffff;
+    --bg-btn: #059669;
+    --bg-btn-hover: #047857;
+    --text-btn: #ffffff;
+    --bg-hamburger: #ffffff;
+    --border-hamburger: #e2e8f0;
+}
+
+/* Dark theme */
+.dark {
+    --bg-page: #020617;
+    --text-page: #f8fafc;
+    --bg-card: #1e293b;
+    --border-card: #334155;
+    --bg-nav-hover: #334155;
+    --bg-nav-active: #059669;
+    --text-nav-active: #ffffff;
+    --bg-btn: #059669;
+    --bg-btn-hover: #047857;
+    --text-btn: #ffffff;
+    --bg-hamburger: #1e293b;
+    --border-hamburger: #334155;
 }
 
 @theme {
-    --color-limegreen-500: #4ade80;
-    --color-limegreen-600: #22c55e;
-    --color-limegreen-700: #16a34a;
-    --color-limegreen-800: #15803d;
-    --color-limegreen-900: #166534;
-    --color-forestgreen-500: #22c55e;
-    --color-forestgreen-600: #16a34a;
-    --color-forestgreen-700: #15803d;
-    --color-forestgreen-800: #166534;
-    --color-forestgreen-900: #166534;
-    --color-mintgreen-100: #bbf7d0;
-    --color-mintgreen-200: #86efac;
-    --color-mintgreen-500: #10b981;
-    --color-mintgreen-600: #059669;
-    --color-mintgreen-700: #047857;
-    --color-mintgreen-800: #065f46;
-    --color-mintgreen-900: #04472f;
+    --color-page-bg: var(--bg-page);
+    --color-page-text: var(--text-page);
+    --color-card-bg: var(--bg-card);
+    --color-card-border: var(--border-card);
+    --color-nav-hover: var(--bg-nav-hover);
+    --color-nav-active: var(--bg-nav-active);
+    --color-nav-active-text: var(--text-nav-active);
+    --color-btn-bg: var(--bg-btn);
+    --color-btn-hover: var(--bg-btn-hover);
+    --color-btn-text: var(--text-btn);
+    --color-hamburger-bg: var(--bg-hamburger);
+    --color-hamburger-border: var(--border-hamburger);
 }

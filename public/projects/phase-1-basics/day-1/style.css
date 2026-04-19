@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*{
+  font-family: "Orbitron", sans-serif;
+}
+
+body{
+  /* background-image: url(./assets/images/bg.jpg);
+  overflow: hidden;
+  background-blend-mode: exclusion; */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container{
+  height: 100vh;
+}
+
+.widget{
+  backdrop-filter: blur(10px);
+  background-color: rgba(12, 13, 15, 0.267);
+  transition: scale 0.2s linear;
+}
+.widget:hover{
+  scale: 1.02;
+}
+
+h1{
+  padding: 20px 0;
+}
+
