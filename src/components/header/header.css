@@ -1,0 +1,20 @@
+.hamMenu {
+    position: relative;
+}
+
+.hamMenu ul {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamMenu ul.active {
+    transform: translateX(30%);
+    right: 40px;
+    opacity: 1;
+    visibility: visible;
+}
