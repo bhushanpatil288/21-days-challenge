@@ -6,30 +6,38 @@
 - Real-time Clock (Hours, Minutes, Seconds)
 - Current Date Display
 - Time Spent Tracker (Session duration)
-- Responsive Design
+- **Interactive Dashboard**: Drag and drop widgets to customize layout
+- **Reordering Logic**: Smart insertion of widgets within containers
+- Responsive Design with dynamic font scaling
 
 🔄 Flow (Step by Step):
-1. Create the basic HTML structure with placeholders for time components.
-2. Initialize JavaScript variables to target the Clock and Date elements.
-3. Define a function to get the current time using the `Date` object.
-4. Format the time values (add a leading zero if the value is less than 10).
-5. Inject the formatted time into the HTML elements.
-6. Use `setInterval` to trigger the time update function every 1000 milliseconds (1 second).
-7. Extract and display the current date in a human-readable format.
-8. Calculate the elapsed time since the page was loaded to show "Time Spent."
+1. Create the basic HTML structure with placeholders for time components and widget containers.
+2. Initialize JavaScript variables to target the Clock, Date, and Draggable elements.
+3. Define functions for real-time updates:
+   - `updateClock`: Updates HH:MM:SS every second.
+   - `updateDate`: Updates the date every 10 minutes.
+   - `updateSpentTime`: Tracks session duration.
+4. Format time values using `padStart(2, '0')`.
+5. Implement Drag and Drop logic:
+   - Add `dragstart` and `dragend` listeners for visual feedback.
+   - Add `dragover` listeners to containers to handle reordering.
+   - Implement `getDragAfterElement` to determine the correct insertion point.
+6. Inject formatted data into the DOM and handle dynamic layout changes.
 
 🖥 UI Plan:
-- Large centered clock display (HH : MM : SS)
-- Date widget below the clock
-- Session tracker widget (Time Spent)
-- Clean, dark-themed or professional background
+- Large centered clock display (HH : MM : SS) with responsive sizing (`clamp`).
+- Date widget and Session tracker in a flexible grid.
+- Visual feedback during drag (opacity changes and dashed borders).
+- Smooth transitions and hover effects for interactivity.
 
 ⚙️ Logic Plan:
 - `new Date()` to capture the current system time.
-- `setInterval(updateTime, 1000)` for live updates.
-- `padStart(2, "0")` or conditional logic for two-digit formatting.
+- `setInterval` for live updates (1s for clock, 10m for date).
+- `getBoundingClientRect()` to calculate widget positions during drag.
+- `insertBefore` and `appendChild` for dynamic DOM manipulation.
 
 🚧 Edge Cases:
 - Handling the transition from 59 seconds to 00 seconds.
-- Ensuring the clock doesn't lag if the browser tab is inactive.
-- Correct date formatting based on different time zones.
+- Ensuring widgets fit correctly when moved from large to small containers (responsive fonts).
+- Maintaining drag performance by efficiently calculating insertion points.
+- Preventing default browser behavior on `dragover` to enable custom dropping.

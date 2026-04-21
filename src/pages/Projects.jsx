@@ -4,8 +4,8 @@ import { phase_1_projects } from "../constants/projects"
 const Projects = () => {
     return (
         <Container>
-            <h2 className="text-2xl font-bold text-center p-5">Phase 1 Projects</h2>
-            <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <h2 className="text-2xl font-bold text-center mt-50">Phase 1 Projects</h2>
+            <div className="mt-15 mb-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {phase_1_projects.map((project) => (
                     <div key={project.id} className="bg-card-bg p-4 rounded-2xl shadow hover:shadow-lg transition-all border border-card-border">
                         <div className="overflow-hidden rounded-2xl">

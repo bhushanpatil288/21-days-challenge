@@ -16,29 +16,31 @@
 
         <h1 class="text-center mt-5 widget fw-bold display-2 rounded-4 particle">Digital Clock</h1>
 
-        <!-- clock -->
-        <div class="d-flex widget gap-2 justify-content-center align-items-center shadow pt-5 pb-5 mt-5 rounded-5">
-            <p class="hour m-0 fw-bolder display-1 w-25 text-center">00</p>
-            <p class="fw-bolder display-1 m-0">:</p>
-            <p class="minute m-0 fw-bolder display-1 w-25 text-center">00</p>
-            <p class="fw-bolder display-1 m-0">:</p>
-            <p class="second m-0 fw-bolder display-1 w-25 text-center">00</p>
+        <div class="widget-container">
+            <div draggable="true"
+                class="d-flex widget draggable gap-2 justify-content-center align-items-center shadow pt-5 pb-5 mt-5 rounded-5">
+                <p class="hour m-0 fw-bolder clock-text w-25 text-center">00</p>
+                <p class="fw-bolder clock-text m-0">:</p>
+                <p class="minute m-0 fw-bolder clock-text w-25 text-center">00</p>
+                <p class="fw-bolder clock-text m-0">:</p>
+                <p class="second m-0 fw-bolder clock-text w-25 text-center">00</p>
+            </div>
         </div>
 
 
         <!-- other widgets -->
         <div class="row">
-            <div class="col-md-5">
-                <div
-                    class="d-flex widget flex-column gap-2 fw-bolder justify-content-center align-items-center shadow p-5 mt-5 rounded-5">
+            <div class="col-md-5 widget-container">
+                <div draggable="true"
+                    class="d-flex widget draggable flex-column gap-2 fw-bolder justify-content-center align-items-center shadow p-5 mt-5 rounded-5">
                     <p class="m-0 fs-5">Time Spent</p>
                     <p class="m-0 timeSpent"></p>
                 </div>
             </div>
 
-            <div class="col-md-7">
-                <div
-                    class="d-flex widget flex-column gap-2 fw-bolder justify-content-center align-items-center shadow p-5 mt-5 rounded-5">
+            <div class="col-md-7 widget-container">
+                <div draggable="true"
+                    class="d-flex widget draggable flex-column gap-2 fw-bolder justify-content-center align-items-center shadow p-5 mt-5 rounded-5">
                     <p class="m-0 fs-5">Date</p>
                     <p class="m-0 date"></p>
                 </div>

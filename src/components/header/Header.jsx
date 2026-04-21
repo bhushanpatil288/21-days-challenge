@@ -23,9 +23,9 @@ const Header = () => {
     return (
         <Container>
             <header>
-                <nav className="flex items-center justify-between select-none">
+                <nav className="flex items-center justify-between select-none py-5">
                     <div>
-                        <img src="/logo.png" alt="" width={150} />
+                        <h2 className="text-3xl font-bold">21 Days Challenge</h2>
                     </div>
                     <div className="flex items-center gap-4">
                         <DesktopMenu navItems={navItems} />
