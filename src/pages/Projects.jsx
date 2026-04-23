@@ -7,8 +7,8 @@ const Projects = () => {
             <h2 className="text-2xl font-bold text-center mt-50">Phase 1 Projects</h2>
             <div className="mt-15 mb-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {phase_1_projects.map((project) => (
-                    <div key={project.id} className="bg-card-bg p-4 rounded-2xl shadow hover:shadow-lg transition-all border border-card-border">
-                        <div className="overflow-hidden rounded-2xl">
+                    <div key={project.id} className="bg-card-bg p-4 rounded-2xl shadow hover:shadow-lg transition-all border border-card-border flex flex-col justify-between">
+                        <div className="overflow-hidden rounded-2xl shadow-lg">
                             <img src={project.img} alt={project.name} />
                         </div>
                         <div className="flex items-center justify-between mt-4">

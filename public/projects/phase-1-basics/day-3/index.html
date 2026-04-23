@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day-3 & 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+    body {
+      font-family: "Bricolage Grotesque", sans-serif;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="overflow-hidden">
+  <div class="overlay backdrop-blur h-screen w-screen bg-blue-500/1 transition-all duration-200 absolute hidden">
+
+  </div>
+  <header>
+    <nav
+      class="container sm:mt-2 mx-auto bg-blue-500 text-white px-5 py-2 sm:rounded-2xl flex items-center justify-between shadow-md">
+      <div>
+        <span class="text-2xl font-bold bg-linear-to-r from-blue-200 to-white bg-clip-text text-transparent">
+          Responsive Navbar
+        </span>
+      </div>
+      <div>
+        <button class="block sm:hidden cursor-pointer" id="menuBtn">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+      <div class="z-5  menu absolute sm:relative sm:flex-row -right-30 sm:right-auto top-0 transition-all duration-200">
+        <ul class="flex gap-3 bg-blue-500 p-5 sm:p-0 flex-col sm:flex-row h-screen sm:h-auto">
+          <li class=" cursor-pointer rounded-2xl px-2 bg-white text-blue-500 mt-20 sm:mt-auto text-center">Home</li>
+          <li class=" cursor-pointer rounded-2xl px-2 bg-white text-blue-500 text-center">About</li>
+          <li class=" cursor-pointer rounded-2xl px-2 bg-white text-blue-500 text-center">Contact</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

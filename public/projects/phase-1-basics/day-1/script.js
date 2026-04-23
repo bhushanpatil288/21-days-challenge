@@ -1,33 +1,7 @@
 const draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".widget-container");
 
-draggables.forEach(draggable => {
-  draggable.addEventListener("dragstart", () => {
-    draggable.classList.add("dragging");
-    // Add a slight delay to allow the ghost image to be created before hiding the original
-    setTimeout(() => {
-      draggable.style.opacity = "0.5";
-    }, 0);
-  });
 
-  draggable.addEventListener("dragend", () => {
-    draggable.classList.remove("dragging");
-    draggable.style.opacity = "1";
-  });
-});
-
-containers.forEach(container => {
-  container.addEventListener("dragover", e => {
-    e.preventDefault();
-    const afterElement = getDragAfterElement(container, e.clientY);
-    const dragging = document.querySelector(".dragging");
-    if (afterElement == null) {
-      container.appendChild(dragging);
-    } else {
-      container.insertBefore(dragging, afterElement);
-    }
-  });
-});
 
 function getDragAfterElement(container, y) {
   const draggableElements = [...container.querySelectorAll(".draggable:not(.dragging)")];
@@ -45,6 +19,34 @@ function getDragAfterElement(container, y) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  draggables.forEach(draggable => {
+    draggable.addEventListener("dragstart", () => {
+      draggable.classList.add("dragging");
+      // Add a slight delay to allow the ghost image to be created before hiding the original
+      setTimeout(() => {
+        draggable.style.opacity = "0.5";
+      }, 0);
+    });
+
+    draggable.addEventListener("dragend", () => {
+      draggable.classList.remove("dragging");
+      draggable.style.opacity = "1";
+    });
+  });
+
+  containers.forEach(container => {
+    container.addEventListener("dragover", e => {
+      e.preventDefault();
+      const afterElement = getDragAfterElement(container, e.clientY);
+      const dragging = document.querySelector(".dragging");
+      if (afterElement == null) {
+        container.appendChild(dragging);
+      } else {
+        container.insertBefore(dragging, afterElement);
+      }
+    });
+  });
+  
   updateClock();
 
   // widgets
