@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day-4</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+    body {
+      font-family: "Bricolage Grotesque", sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="overflow-x-hidden min-h-screen">
+  
+  <main class="h-150 mt-30 container mx-auto">
+    <div class="swiper mySwiper shadow-md rounded-xl">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.marvel.com/content/2x/005smp_com_mas_mob_03_3.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://cdn.marvel.com/content/2x/005smp_com_fea_mob_01.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://cdn.marvel.com/content/2x/002irm_ons_cut_dsk_01_1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://cdn.marvel.com/content/2x/002irm_ons_mas_dsk_01_0.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://codemithra.com/wp-content/uploads/2024/07/What-is-a-Full-Stack-Developer-jpg.webp" alt="">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="text-center mt-3">
+      <p class="text-blue-600">Autoplay</p>
+      <button id="autoplayBtn" class="text-4xl text-blue-500">
+        <i class="ri-play-circle-fill"></i>
+      </button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+
+    });
+    swiper.autoplay.stop();
+    autoplayBtn.addEventListener("click", ()=>{
+      let icon = autoplayBtn.querySelector("i");
+      if(swiper.autoplay.running){
+        swiper.autoplay.stop();
+        icon.classList.add("ri-play-circle-fill");
+        icon.classList.remove("ri-pause-circle-fill");
+      } else {
+        swiper.autoplay.start();
+        icon.classList.remove("ri-play-circle-fill");
+        icon.classList.add("ri-pause-circle-fill");
+      }
+    })
+  </script>
+</body>
+
+</html>
