@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup UI</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="mt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <form class="shadow rounded-3 px-3 py-4 bg-white" novalidate>
+              <p class="fs-2">Login Form</p>
+              <p class="text-secondary fs-6">Welcome back, login to continue</p>
+              <div class="d-flex flex-column gap-3 mt-4">
+
+                <div>
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Your Email Address"
+                    class="input border rounded-3 w-100 shadow-sm" />
+                  <div id="emailInvalid" class="invalid opacity-0 text-danger fw-semibold mt-2">Invalid email</div>
+                </div>
+
+                <div>
+                  <label for="password" class="form-label">Password</label>
+                  <div
+                    class="password-container shadow-sm rounded-3 border d-flex justify-content-between align-items-center">
+                    <input class="password_input input" id="password" type="password" name="" placeholder="Your secret password">
+                    <a href="#" class="preview_icon">
+                      <i class="fas"></i>
+                    </a>
+                  </div>
+                  <div id="passwordInvalid" class="invalid opacity-0 mt-2 text-danger fw-semibold">
+                    Invaild password (ex. Test@123)
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="text-center mt-3">
+                <button class="btn btn-dark w-100">submit</button>
+                <p class="fs-6 mt-2">
+                  Don't have an account?
+                  <a class="text-dark" href="./signup.html">Sign up</a>
+                  Now
+                </p>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- bootstrap -->
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
