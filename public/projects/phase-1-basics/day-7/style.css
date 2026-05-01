@@ -1,0 +1,128 @@
+* {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.checkmark {
+  /* background: #1a1a1a; */
+  /* color: white; */
+  border-radius: 50%;
+  text-align: center;
+  padding: 8px 8px;
+  /* font-weight: 600; */
+  /* font-size: 14px; */
+  /* min-width: 36px; */
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid #ffffff;
+}
+
+.todo-card {
+  background: #ffffff;
+  backdrop-filter: blur(20px);
+  border: 2px solid #000000;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.todo-card:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+#taskInput {
+  background: #f5f5f5;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+#taskInput:focus {
+  background: #ffffff;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+#taskInput::placeholder {
+  color: #999999;
+}
+
+.add-btn {
+  background: #000000;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.add-btn:hover {
+  background: #333333;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.add-btn:active {
+  transform: none;
+}
+
+.task-item {
+  background: #f9f9f9;
+  border-left: 4px solid #000000;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  background: #eeeeee;
+  border-left-color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.del, .edit {
+  background: #f0f0f0;
+  color: #000000;
+  transition: all 0.3s ease;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.del:hover, .edit:hover {
+  background: #000000;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.task-item .task-text {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999999;
+  padding: 40px 20px;
+}
+
+.empty-state i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.header-subtitle {
+  color: #666666;
+  font-size: 1.1rem;
+  font-weight: 300;
+}

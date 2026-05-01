@@ -5,6 +5,7 @@ import responsiveNav from "/projects/phase-1-basics/day-3/index.html?url";
 import imageSlider from "/projects/phase-1-basics/day-4/index.html?url";
 import loginSignupUi from "/projects/phase-1-basics/day-5/login.html?url";
 import todoAppBasic from "/projects/phase-1-basics/day-6/index.html?url"
+import todoAppAdvanced from "/projects/phase-1-basics/day-7/index.html?url";
 
 // project image paths
 import digitalClockImg from "/images/day-1-digital-clock.png";
@@ -13,6 +14,7 @@ import responsiveNavImg from "/images/day-3-responsive-navbar.png";
 import imageSliderImg from "/images/day-4-img-slider.png";
 import loginSignupUiImg from "/images/day-5-login-signup-ui.png";
 import todoAppBasicImg from "/images/day-6-todoApp-basic.png";
+import todoAppAdvancedImg from "/images/day-7-todoApp-Advanced.png";
 
 
 export const phase_1_projects = [
@@ -46,5 +48,10 @@ export const phase_1_projects = [
         name: "Todo App Basic",
         path: todoAppBasic,
         img: todoAppBasicImg
+    },{
+        id: 7,
+        name: "Todo App Advanced",
+        path: todoAppAdvanced,
+        img: todoAppAdvancedImg
     }
 ]
