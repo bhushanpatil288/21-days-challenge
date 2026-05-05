@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <main>
+    <section>
+      <!-- Title -->
+      <div class="text-center py-10">
+        <h1 class="text-4xl font-bold">Notes App</h1>
+      </div>
+    </section>
+
+    <section>
+      <!-- Note taking area -->
+      <div class="notes_container container mx-auto flex flex-wrap justify-start">
+
+        <div class="w-1/4">
+          <div class="note mx-10 mt-10 bg-slate-100 p-4 rounded-md shadow-md">
+            <div>
+              <textarea class="w-full h-35 p-2 outline-none" id="content" placeholder="Start writing"
+                class="border border-gray-300 rounded px-2 py-1"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- add note button -->
+        <div class="flex min-h-35 w-1/4 items-center justify-center">
+          <button id="add_note" class="bg-blue-500 cursor-pointer text-white px-4 py-2 rounded text-2xl font-bold"
+            title="add note">+</button>
+        </div>
+      </div>
+    </section>
+    <!-- floating note button -->
+    <div id="save_note" title="save notes"
+      class="fixed bottom-4 right-4 w-12 h-12 flex items-center justify-center text-white bg-blue-500 hover:bg-blue-600 cursor-pointer p-1 px-2 rounded-md transition-all duration-200">
+      <i class="ri-save-line"></i>
+    </div>
+  </main>
+
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
