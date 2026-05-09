@@ -59,16 +59,24 @@ export const phase_1_projects = [
 
 
 // phase 2 project html files
-import NotesApp from "/projects/phase-2-real-features/day-8/index.html?url";
+import notesApp from "/projects/phase-2-real-features/day-8/index.html?url";
+import weatherApp from "/projects/phase-2-real-features/day-9/index.html?url";
+
 
 // phase 2 project image paths
-import NotesAppImg from "/images/day-8-notes-app.png";
+import notesAppImg from "/images/day-8-notes-app.png";
+import weatherAppImg from "/images/day-9-weather-app.png";
 
 export const phase_2_projects = [
     {
         id: 1,
         name: "Notes App",
-        path: NotesApp,
-        img: NotesAppImg
-    },
+        path: notesApp,
+        img: notesAppImg
+    },{
+        id: 2,
+        name: "Weather App",
+        path: weatherApp,
+        img: weatherAppImg
+    }
 ]
