@@ -61,11 +61,13 @@ export const phase_1_projects = [
 // phase 2 project html files
 import notesApp from "/projects/phase-2-real-features/day-8/index.html?url";
 import weatherApp from "/projects/phase-2-real-features/day-9/index.html?url";
+import productFilter from "/projects/phase-2-real-features/day-10/index.html?url";
 
 
 // phase 2 project image paths
 import notesAppImg from "/images/day-8-notes-app.png";
 import weatherAppImg from "/images/day-9-weather-app.png";
+import productFilterImg from "/images/day-10-product-filter.png";
 
 export const phase_2_projects = [
     {
@@ -78,5 +80,10 @@ export const phase_2_projects = [
         name: "Weather App",
         path: weatherApp,
         img: weatherAppImg
+    },{
+        id: 3,
+        name: "Product Filter",
+        path: productFilter,
+        img: productFilterImg
     }
 ]
